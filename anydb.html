@@ -14,127 +14,186 @@
 
 <header class="site-nav">
   <div class="container">
-    <a href="index.html"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
+    <a href="index.html" aria-label="VKT Inc. home"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
     <nav class="nav-links">
       <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#finance">Finance</a>
+      <a href="anydb.html" class="active">Technology</a>
       <a href="index.html#how-we-work">How we work</a>
       <a href="field-notes.html">Field Notes</a>
       <a href="talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><i></i><i></i></button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 
-<section class="hero-white">
+<section class="hero-white" style="border-bottom:none">
   <div class="container">
-    <div>
-      <div class="lockup">
-        <img src="assets/vkt-logo-nav.png" alt="VKT Inc.">
-        <span class="divider"></span>
-        <img src="assets/anydb-logo-white.png" alt="AnyDB" style="height:34px">
-      </div>
-      <div class="eyebrow on-ice">AnyDB implementation &amp; support partner · Philippines</div>
-      <h1>AnyDB is the platform.<br>VKT makes it work for <span>your</span> business.</h1>
-      <p>We work out what your operation actually needs, build it in AnyDB, and stay with you through adoption.</p>
-      <div class="hero-ctas">
-        <a href="talk-to-us.html" class="btn">Show us the workflow you'd build first</a>
-        <a href="#how-it-runs" class="link-cta">See how we scope it →</a>
-      </div>
-    </div>
-    <div class="answer-card">
-      <div class="kicker" style="color:var(--navy-deep)">THE SHORT ANSWER</div>
-      <p>Buying AnyDB gives you the platform. The hard part is deciding how your operation should be modelled inside it — objects, relationships, workflow rules, permissions and the handoffs to your existing accounting, CRM and payment systems.</p>
-      <p class="dim">That's the part VKT does, with the people who'll still be answering the phone afterwards.</p>
+    <div class="eyebrow">AnyDB implementation &amp; support partner · Philippines</div>
+    <h1 class="fh-anydb" style="margin-top:22px">AnyDB is the platform. VKT makes it work for <span>your</span> business.</h1>
+    <p>Buying AnyDB gives you the platform. Deciding how your operation should be modelled inside it is the hard part — that's ours.</p>
+    <div class="hero-ctas">
+      <a href="talk-to-us.html" class="btn">Show us the workflow you'd build first</a>
+      <a href="#how-it-runs" class="link-cta">See how we scope it →</a>
     </div>
   </div>
 </section>
+
+<div class="container" style="padding:0 var(--gutter) var(--pad-lg)">
+  <div class="lockup">
+    <img src="assets/vkt-logo-nav.png" alt="VKT Inc.">
+    <span class="divider"></span>
+    <img src="assets/anydb-logo-white.png" alt="AnyDB">
+    <span>Implementation, integration and support for AnyDB in the Philippines.</span>
+  </div>
+</div>
 
 <div class="ribbon">
   <span>Landed here from AnyDB? You're in the right place — we're the humans who implement it.</span>
   <a href="talk-to-us.html" class="link-cta">Talk to an operator, not a sales team →</a>
 </div>
 
-<section class="section-tight">
-  <div class="container split uneven-right">
-    <div>
+<section class="section-white">
+  <div class="container">
+    <div class="section-header stack">
       <div class="eyebrow">What is AnyDB?</div>
-      <h2 style="font-size:34px;line-height:1.07;letter-spacing:-.04em;margin-top:14px">A business database for operations and workflows.</h2>
+      <h2 class="fh2" style="margin-top:14px;max-width:760px">Your business is made of real things. AnyDB models them.</h2>
+      <p>Four ideas, and you've got the whole platform.</p>
     </div>
-    <div>
-      <p style="font-size:17px;line-height:1.68;color:var(--navy)">AnyDB is a platform for operational systems that don't fit neatly into a packaged software category — the work that usually ends up in spreadsheets, or bolted onto an ERP or CRM that was never designed for it. You model the real things in your business as connected records, then run the process on top of them.</p>
-      <div class="feature-grid-3">
-        <div><strong>Records &amp; relationships</strong><p>Model items, projects, assets, vendors, claims — and how they connect.</p></div>
-        <div><strong>Views &amp; forms</strong><p>Each team sees what it needs; structured capture replaces email requests.</p></div>
-        <div><strong>Workflow automation</strong><p>Routing, approvals, reminders and handoffs as work progresses.</p></div>
-        <div><strong>Dashboards &amp; reporting</strong><p>Live operational data instead of a monthly export.</p></div>
-        <div><strong>Portals &amp; permissions</strong><p>Controlled access for customers, vendors and partners.</p></div>
-        <div><strong>APIs, cloud or on-prem</strong><p>Connects to the systems you already run; deploy where you need to.</p></div>
+
+    <div class="objects-grid">
+      <div>
+        <span class="step-num">01</span>
+        <strong>Real things</strong>
+        <p>Orders, items, vendors, sites, claims.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:auto">
+          <span class="obj-chip">Order</span><span class="obj-chip">Item</span><span class="obj-chip">Vendor</span><span class="obj-chip">Site</span>
+        </div>
       </div>
-      <div class="divider-io">
-        <img src="assets/anydb-logo-white.png" alt="AnyDB" style="height:34px">
-        <span>AnyDB's mark always appears at its own proportions with clear space around it — never recoloured, never inside a VKT-branded shape. Dark wordmark on light grounds, white wordmark on navy.</span>
+      <div>
+        <span class="step-num">02</span>
+        <strong>Become objects</strong>
+        <p>Each one holds its own information, and can contain others.</p>
+        <div class="obj-nest" style="margin-top:auto">
+          <span>Order</span>
+          <div class="obj-nest-children"><span>Line item</span><span>Line item</span></div>
+        </div>
       </div>
-      <p style="margin-top:16px;font-size:14px;color:var(--muted)">AnyDB is built by Humanly Inc (Austin, Texas) — the founding team behind FileCloud. Capability details above are AnyDB's; we'll verify anything specific against your requirements before you commit.</p>
+      <div class="ice">
+        <span class="step-num on-ice">03</span>
+        <strong>Connect them</strong>
+        <p>Link the ones that stand on their own. Data flows along the link.</p>
+        <div style="margin-top:auto">
+          <div class="obj-link"><span>Order</span><span class="obj-link-line"></span><span>Vendor</span></div>
+          <div class="obj-flow-label">DATA FLOWS →</div>
+        </div>
+      </div>
+      <div class="navy">
+        <span class="step-num">04</span>
+        <strong>You have a system</strong>
+        <p>Views, forms, automation, dashboards and portals on top.</p>
+        <div class="obj-system-list">
+          <span class="dim">Procurement</span><span class="dim">Inventory</span><span class="hot">Approvals</span>
+        </div>
+      </div>
     </div>
+
+    <div class="carousel" data-carousel="objects">
+      <div class="carousel-item" style="border:1px solid var(--line);border-radius:16px;padding:20px 16px;display:flex;flex-direction:column">
+        <span class="step-num">01</span><strong style="display:block;margin-top:8px;font-size:18px">Real things</strong><p style="margin:8px 0 12px;font-size:14px;color:var(--muted)">Orders, items, vendors, sites.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:auto"><span class="obj-chip">Order</span><span class="obj-chip">Item</span><span class="obj-chip">Vendor</span></div>
+      </div>
+      <div class="carousel-item" style="border:1px solid var(--line);border-radius:16px;padding:20px 16px;display:flex;flex-direction:column">
+        <span class="step-num">02</span><strong style="display:block;margin-top:8px;font-size:18px">Become objects</strong><p style="margin:8px 0 12px;font-size:14px;color:var(--muted)">Each holds its own information.</p>
+        <div class="obj-nest" style="margin-top:auto"><span>Order</span><div class="obj-nest-children"><span>Line item</span></div></div>
+      </div>
+      <div class="carousel-item" style="border:1px solid var(--ice-border);background:var(--ice);border-radius:16px;padding:20px 16px;display:flex;flex-direction:column">
+        <span class="step-num on-ice">03</span><strong style="display:block;margin-top:8px;font-size:18px">Connect them</strong><p style="margin:8px 0 12px;font-size:14px;color:var(--navy-deep)">Data flows along the link.</p>
+        <div style="margin-top:auto"><div class="obj-link"><span>Order</span><span class="obj-link-line"></span><span>Vendor</span></div></div>
+      </div>
+      <div class="carousel-item" style="border:1px solid var(--navy-deep);background:var(--navy-deep);color:#fff;border-radius:16px;padding:20px 16px;display:flex;flex-direction:column">
+        <span class="step-num">04</span><strong style="display:block;margin-top:8px;font-size:18px">You have a system</strong><p style="margin:8px 0 12px;font-size:14px;color:var(--ice-text-dim)">Views, automation, dashboards.</p>
+        <div class="obj-system-list"><span class="dim">Procurement</span><span class="hot">Approvals</span></div>
+      </div>
+    </div>
+    <div class="carousel-dots" data-carousel-dots="objects">
+      <span class="active" data-dot></span><span data-dot></span><span data-dot></span><span data-dot></span>
+      <span class="swipe-hint">Swipe →</span>
+    </div>
+
+    <p style="margin-top:20px;font-size:14px;line-height:1.6;color:var(--muted);max-width:760px">AnyDB is built by Humanly Inc (Austin, Texas) — the founding team behind FileCloud. Cloud or on-premise, with APIs to the systems you already run.</p>
   </div>
 </section>
 
-<section class="section-ice">
+<section class="section-ice-lg">
   <div class="container">
-    <div class="section-header" style="margin-bottom:32px">
-      <div>
-        <div class="eyebrow on-ice">Why use a partner at all?</div>
-        <h2 style="font-size:36px;color:var(--navy-deep)">You can start AnyDB on your own. Plenty do.</h2>
-      </div>
-      <p style="color:var(--navy-deep)">It's a self-serve platform, and if one team owns one simple process, go for it. The line below is where most businesses start losing time.</p>
+    <div class="section-header stack">
+      <div class="eyebrow on-ice">Why use a partner at all?</div>
+      <h2 class="fh2" style="margin-top:14px;max-width:760px;color:var(--navy-deep)">You can start AnyDB on your own. Plenty do.</h2>
+      <p style="color:var(--navy-deep)">Here's the line where most businesses start losing time.</p>
     </div>
     <div class="compare-card">
       <div class="compare-row compare-head">
         <span>&nbsp;</span>
-        <span style="border-left:1px solid var(--line)">ANYDB ON YOUR OWN</span>
-        <span>ANYDB WITH VKT</span>
+        <span style="border-left:1px solid var(--line)">ON YOUR OWN</span>
+        <span>WITH VKT</span>
       </div>
-      <div class="compare-row"><span>Deciding how to model it</span><span>You design the objects and relationships yourself</span><span>We map the real workflow first, then model it</span></div>
-      <div class="compare-row"><span>Your existing systems</span><span>Integration is on your team</span><span>We define and build the handoffs to accounting, CRM and payments</span></div>
-      <div class="compare-row"><span>Getting people to use it</span><span>Internal change management, usually unowned</span><span>We're there through go-live and adoption</span></div>
-      <div class="compare-row"><span>When AnyDB isn't the answer</span><span>You find out after building</span><span>We say so in discovery. We're not paid to deploy it</span></div>
+      <div class="compare-row"><span>Modelling the workflow</span><span>You design the objects yourself</span><span>We map the real workflow first</span></div>
+      <div class="compare-row"><span>Your existing systems</span><span>Integration is on your team</span><span>We build the handoffs</span></div>
+      <div class="compare-row"><span>Getting people to use it</span><span>Usually unowned</span><span>We're there through adoption</span></div>
+      <div class="compare-row"><span>When AnyDB isn't the answer</span><span>You find out after building</span><span>We say so in discovery</span></div>
     </div>
   </div>
 </section>
 
-<section class="section-tight">
+<section class="section-white">
   <div class="container">
-    <div class="section-header" style="margin-bottom:30px">
-      <div>
-        <div class="eyebrow">What we build in AnyDB</div>
-        <h2 style="font-size:36px">Operations that never fitted the software you bought.</h2>
-      </div>
-      <p>Common starting points. Each one is a single workflow you can put into real use before deciding what comes next.</p>
+    <div class="section-header stack">
+      <div class="eyebrow">What we build in AnyDB</div>
+      <h2 class="fh2" style="margin-top:14px;max-width:760px">Operations that never fitted the software you bought.</h2>
     </div>
-    <div class="usecase-grid">
-      <div><strong>Inventory &amp; stock movement</strong><p>Items, locations, movements, receipts and fulfilment — off the spreadsheet, connected to sales.</p></div>
-      <div><strong>Procure to pay</strong><p>Vendors, purchase orders, receiving and vendor invoices with an approval trail that holds up.</p></div>
-      <div><strong>Approval workflows</strong><p>Requests, routing, reviews and decisions captured where finance can find them.</p></div>
-      <div><strong>Quote to cash</strong><p>One defined handoff from the deal to the invoice, instead of finance re-typing it.</p></div>
-      <div><strong>Projects &amp; field work</strong><p>Installations, tasks, resources, files and delivery tracked in one operational model.</p></div>
-      <div><strong>Assets &amp; maintenance</strong><p>Equipment, inspections, work orders and history, including the ones currently on paper.</p></div>
+    <div class="usecase-chips">
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"></path><path d="M4 7.5 12 12l8-4.5"></path><path d="M12 12v9"></path></svg>Inventory &amp; stock movement</span>
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle><path d="M3 4h2l2.5 11h11L21 7H6"></path></svg>Procure to pay</span>
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 6.5 10 17l-5-5"></path><path d="M4 20h16"></path></svg>Approval workflows</span>
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle></svg>Quote to cash</span>
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Projects &amp; field work</span>
+      <span class="usecase-chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 1 0 3 6.9L21 17l-2 2-3.6-3.5a4 4 0 0 0-.9-9z"></path><path d="m8 8-5 5 3 3 5-5"></path></svg>Assets &amp; maintenance</span>
     </div>
   </div>
 </section>
 
-<section class="section" id="how-it-runs">
-  <div class="container split uneven-left" style="border-top:1px solid var(--line);padding-top:44px">
-    <div>
-      <div class="eyebrow">How an AnyDB build runs with us</div>
-      <h2 style="font-size:32px;line-height:1.08;letter-spacing:-.04em;margin-top:14px">Four weeks to something in real use, not a twelve-month programme.</h2>
-      <p style="margin-top:14px;font-size:15px;line-height:1.6;color:var(--muted)">Indicative, not a quote — the shape depends on the workflow.</p>
+<section class="section-ice-lg" id="how-it-runs">
+  <div class="container">
+    <div class="section-header stack">
+      <div class="eyebrow on-ice">How a build runs</div>
+      <h2 class="fh2" style="margin-top:14px;max-width:760px;color:var(--navy-deep)">Four weeks to something in real use.</h2>
+      <p style="color:var(--navy-deep)">Indicative, not a quote.</p>
     </div>
-    <div class="timeline">
-      <div><span>WEEK 1</span><div><strong>Walk the workflow</strong><p>Who touches it, in what order, where the manual steps and duplicate entry are. Bring the spreadsheet.</p></div></div>
-      <div><span>WEEK 1–2</span><div><strong>Model it in AnyDB</strong><p>Objects, relationships, views and the rules the process actually follows — reviewed with the people doing the work.</p></div></div>
-      <div class="highlight"><span>WEEK 2–3</span><div><strong>Connect and automate</strong><p>Handoffs to your accounting, CRM or payment systems, then automation for the repeatable parts only.</p></div></div>
-      <div><span>WEEK 3–4</span><div><strong>Into real use, with us there</strong><p>Live with one team, fixes in days not sprints, and the same people on support afterwards.</p></div></div>
+
+    <div class="build-weeks">
+      <div><span>WEEK 1</span><strong>Walk the workflow</strong><p>Bring the spreadsheet.</p></div>
+      <div><span>WEEK 1–2</span><strong>Model it in AnyDB</strong><p>Objects, links and the rules you actually follow.</p></div>
+      <div class="highlight"><span>WEEK 2–3</span><strong>Connect and automate</strong><p>Handoffs to accounting, CRM or payments.</p></div>
+      <div><span>WEEK 3–4</span><strong>Into real use, with us there</strong><p>Same people on support afterwards.</p></div>
+    </div>
+
+    <div class="carousel" data-carousel="weeks">
+      <div class="carousel-item" style="flex-basis:210px;background:#fff;border:1px solid var(--ice-border);border-radius:14px;padding:18px 16px">
+        <span class="kicker" style="color:var(--orange)">WEEK 1</span><strong style="display:block;margin-top:8px;font-size:17px">Walk the workflow</strong><p style="margin-top:8px;font-size:14px;color:var(--muted)">Bring the spreadsheet.</p>
+      </div>
+      <div class="carousel-item" style="flex-basis:210px;background:#fff;border:1px solid var(--ice-border);border-radius:14px;padding:18px 16px">
+        <span class="kicker" style="color:var(--orange)">WEEK 1–2</span><strong style="display:block;margin-top:8px;font-size:17px">Model it in AnyDB</strong><p style="margin-top:8px;font-size:14px;color:var(--muted)">Objects, links and the rules you follow.</p>
+      </div>
+      <div class="carousel-item" style="flex-basis:210px;background:var(--navy-deep);color:#fff;border:1px solid var(--navy-deep);border-radius:14px;padding:18px 16px">
+        <span class="kicker" style="color:var(--orange)">WEEK 2–3</span><strong style="display:block;margin-top:8px;font-size:17px">Connect and automate</strong><p style="margin-top:8px;font-size:14px;color:var(--ice-text-dim)">Handoffs to accounting, CRM or payments.</p>
+      </div>
+      <div class="carousel-item" style="flex-basis:210px;background:#fff;border:1px solid var(--ice-border);border-radius:14px;padding:18px 16px">
+        <span class="kicker" style="color:var(--orange)">WEEK 3–4</span><strong style="display:block;margin-top:8px;font-size:17px">Into real use, with us there</strong><p style="margin-top:8px;font-size:14px;color:var(--muted)">Same people on support afterwards.</p>
+      </div>
+    </div>
+    <div class="carousel-dots" data-carousel-dots="weeks">
+      <span class="active" data-dot></span><span data-dot></span><span data-dot></span><span data-dot></span>
+      <span class="swipe-hint">Swipe →</span>
     </div>
   </div>
 </section>
@@ -142,35 +201,30 @@
 <section class="section-navy">
   <div class="container split uneven-left">
     <div>
-      <div class="eyebrow on-navy">AnyDB questions we get asked</div>
-      <h2 style="font-size:34px;line-height:1.07;letter-spacing:-.04em;margin-top:14px;color:#fff">Straight answers.</h2>
-      <p style="margin-top:14px;font-size:15px;line-height:1.6;color:var(--ice-text-dim)">If your question isn't here, ask it directly. A person replies.</p>
-      <a href="talk-to-us.html" class="link-cta on-navy" style="display:inline-block;margin-top:16px">Ask us instead →</a>
+      <div class="eyebrow on-navy">AnyDB questions</div>
+      <h2 class="fh2-md" style="margin-top:14px;color:#fff">Straight answers.</h2>
+      <a href="talk-to-us.html" class="link-cta on-navy" style="display:inline-block;margin-top:16px">Ask us yours →</a>
     </div>
     <div class="faq on-navy">
       <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">Is VKT reselling AnyDB?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>No. AnyDB is the platform vendor. VKT does the discovery, solution design, implementation, integration and ongoing support around it. You can buy AnyDB without us, and we'll tell you when your existing systems can do the job instead.</p>
+        <button class="faq-q" aria-expanded="false"><strong style="color:#fff">Is VKT reselling AnyDB?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>No. AnyDB is the platform vendor; VKT does discovery, solution design, implementation, integration and support. You can buy AnyDB without us, and we'll say when your existing systems can do the job instead.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">How is AnyDB different from an ERP?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>An ERP brings a predefined model of how a business should run, and you fit yourself to it. AnyDB lets you model your operation as it actually works and add systems over time. That flexibility is the point — and the reason the modelling decisions matter more than the licence.</p>
+        <button class="faq-q" aria-expanded="false"><strong style="color:#fff">How is AnyDB different from an ERP?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>An ERP brings a predefined model and you fit yourself to it. AnyDB lets you model your operation as it actually works — which is why the modelling decisions matter more than the licence.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">Do we have to replace our accounting or CRM?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>Usually not. AnyDB connects to systems you already run through APIs and integrations. We'd rather keep a working accounting platform and fix the operational process happening around it.</p>
+        <button class="faq-q" aria-expanded="false"><strong style="color:#fff">Do we have to replace our accounting or CRM?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>Usually not. AnyDB connects to what you already run. We'd rather keep a working accounting platform and fix the process happening around it.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">Can we start small?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>That's how we prefer to work. One real workflow, into real use, then expand only when it earns it. AnyDB supports that pattern — start with one system and connect the rest later.</p>
+        <button class="faq-q" aria-expanded="false"><strong style="color:#fff">Can we start small?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>That's how we prefer to work. One real workflow into real use, then expand only when it earns it.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">Who supports it after go-live?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>We do, for the system we built — the same people, not a ticket queue behind an account manager. AnyDB supports the platform itself.</p>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><strong style="color:#fff">Where is VKT based, and does that matter?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>The Philippines, with operating experience from businesses serving larger international markets. Most firms put a team like ours behind an onshore agency. Here you deal with us directly.</p>
+        <button class="faq-q" aria-expanded="false"><strong style="color:#fff">Who supports it after go-live?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>We do, for the system we built — the same people, not a ticket queue. AnyDB supports the platform itself.</p>
       </div>
     </div>
   </div>
@@ -178,20 +232,43 @@
 
 <div class="cta-band">
   <div>
-    <div class="eyebrow on-ice">Start with one real problem</div>
-    <h2 style="max-width:640px">Tell us the workflow. We'll tell you whether AnyDB is the right home for it.</h2>
-    <p>Four questions, no requirements document — and an honest answer if the fix is smaller than a new system.</p>
+    <div class="eyebrow on-ice">Talk to VKT</div>
+    <h2 class="fh2-md" style="color:var(--navy);max-width:640px">Tell us the workflow. We'll tell you whether AnyDB fits.</h2>
   </div>
-  <div class="cta-band-actions" style="align-items:flex-start">
+  <div class="cta-band-actions">
     <a href="talk-to-us.html" class="btn">We're humans. Talk to VKT →</a>
-    <a href="field-notes.html" class="link-cta on-ice">Or read how we think first →</a>
+    <span>Four questions · no requirements document</span>
   </div>
 </div>
 
-<footer>
-  <div class="footer-simple">
-    <span>© 2026 VKT Inc Solutions · Registered in the Philippines · AnyDB is a product of Humanly Inc and is not affiliated with VKT beyond our implementation work</span>
-    <span class="links"><a href="#">Security</a><a href="#">Privacy policy</a></span>
+<footer class="site-footer">
+  <div class="footer-links">
+    <div class="footer-brand">
+      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
+      <p>Operational systems for growing businesses.<br>Philippines-based.</p>
+    </div>
+    <div class="footer-col">
+      <strong>VKT</strong>
+      <a href="about.html">Why VKT</a>
+      <a href="anydb.html">Technology</a>
+      <a href="field-notes.html">Notes from the operators</a>
+      <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
+    </div>
+    <div class="footer-col">
+      <strong>Trust &amp; legal</strong>
+      <a href="#">Security</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Data handling</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <strong>Business information</strong>
+      <span>VKT Inc Solutions<br>Registered in the Philippines</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 VKT Inc Solutions · AnyDB is a product of Humanly Inc</span>
+    <span>Questions about privacy or security? Ask us through the contact form.</span>
   </div>
 </footer>
 

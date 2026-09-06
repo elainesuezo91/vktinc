@@ -13,17 +13,25 @@
 <body>
 
 <nav class="article-nav">
-  <a href="../index.html"><img src="../assets/vkt-logo-nav.png" alt="VKT Inc."></a>
-  <div class="actions">
-    <a href="../field-notes.html" class="back">← All Field Notes</a>
-    <a href="../talk-to-us.html" class="nav-cta" style="background:var(--orange)">Talk to VKT →</a>
+  <a href="../index.html" aria-label="VKT Inc. home"><img src="../assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
+  <div class="nav-links" style="margin-left:auto">
+    <a href="../index.html#what-we-do">What we do</a>
+    <a href="../anydb.html">Technology</a>
+    <a href="../field-notes.html" class="active">Field Notes</a>
+    <a href="../talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
   </div>
 </nav>
+<div class="article-back">
+  <a href="../field-notes.html" class="link-cta back">← All Field Notes</a>
+</div>
 
 <article>
   <header class="article-header">
-    <div class="kicker" style="color:var(--navy-deep)">FIELD NOTE · SYSTEMS</div>
-    <h1 class="serif">How much of your business is quietly being run from a spreadsheet?</h1>
+    <div class="eyebrow with-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 5.5 15H12z"></path><path d="M13.5 6.5 19 15h-5.5z"></path><path d="M3 18h18l-2.5 3.5h-13z"></path></svg>
+      <span style="color:var(--navy-deep)">FIELD NOTE</span>
+    </div>
+    <h1 class="serif fh-art">How much of your business is quietly being run from a spreadsheet?</h1>
     <div class="article-byline"><strong>Kathy</strong><span>·</span><span>4 min read</span><span>·</span><span>March 2026</span></div>
   </header>
 
@@ -57,10 +65,40 @@
 
   <div class="related-notes">
     <div class="more-notes-head" style="margin-bottom:0">RELATED NOTES</div>
-    <div class="related-note"><span class="topic">SYSTEMS</span><h3 class="serif">Every workaround is a requirement nobody wrote down.</h3></div>
-    <div class="related-note"><span class="topic">FINANCE OPS</span><h3 class="serif">Nine days to close, and eight of them are waiting.</h3></div>
+    <div class="related-note"><span class="kicker" style="color:var(--navy-deep)">SYSTEMS</span><h3 class="serif">Every workaround is a requirement nobody wrote down.</h3></div>
+    <div class="related-note"><span class="kicker" style="color:var(--navy-deep)">FINANCE OPS</span><h3 class="serif">Nine days to close, and eight of them are waiting.</h3></div>
   </div>
-  <div class="article-footer">© 2026 VKT Inc Solutions · Registered in the Philippines</div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <div class="footer-brand">
+        <img src="../assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
+        <p>Operational systems for growing businesses.<br>Philippines-based.</p>
+      </div>
+      <div class="footer-col">
+        <strong>VKT</strong>
+        <a href="../about.html">Why VKT</a>
+        <a href="../anydb.html">Technology</a>
+        <a href="../field-notes.html">Notes from the operators</a>
+        <a href="../talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
+      </div>
+      <div class="footer-col">
+        <strong>Trust &amp; legal</strong>
+        <a href="#">Security</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Data handling</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-col">
+        <strong>Business information</strong>
+        <span>VKT Inc Solutions<br>Registered in the Philippines</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VKT Inc Solutions</span>
+      <span>Questions about privacy or security? Ask us through the contact form.</span>
+    </div>
+  </footer>
 </article>
 
 <script src="../js/main.js"></script>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Field Notes — VKT Inc.</title>
-<meta name="description" content="Notes from the messy middle of real operations. What we notice inside businesses that are growing faster than their systems.">
+<meta name="description" content="Notes from the messy middle of real operations. Written by the people doing the work.">
 <link rel="icon" type="image/png" href="assets/vkt-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -12,98 +12,77 @@
 </head>
 <body>
 
-<header class="site-nav on-white">
+<header class="site-nav">
   <div class="container">
-    <a href="index.html"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo" style="height:32px"></a>
+    <a href="index.html" aria-label="VKT Inc. home"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
     <nav class="nav-links">
       <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#finance">Finance</a>
+      <a href="anydb.html">Technology</a>
       <a href="index.html#how-we-work">How we work</a>
       <a href="field-notes.html" class="active">Field Notes</a>
       <a href="talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><i></i><i></i></button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 
-<section class="section" style="padding-bottom:40px;border-bottom:1px solid var(--line)">
-  <div class="container" style="display:grid;grid-template-columns:1fr auto;gap:56px;align-items:end">
-    <div>
-      <div class="eyebrow">Field Notes</div>
-      <h1 class="serif" style="font-size:56px;line-height:1.02;letter-spacing:-.02em;margin-top:16px;max-width:820px">Notes from the messy middle of real operations.</h1>
-      <p style="margin-top:16px;font-size:17px;line-height:1.6;color:var(--muted);max-width:620px">What we notice inside businesses that are growing faster than their systems. Written by the people doing the work.</p>
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="eyebrow with-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 5.5 15H12z"></path><path d="M13.5 6.5 19 15h-5.5z"></path><path d="M3 18h18l-2.5 3.5h-13z"></path></svg>
+      <span>Field Notes</span>
     </div>
-    <div class="topic-filters" data-topic-filters>
-      <div class="topic-chip active" data-topic-filter="all">All notes</div>
-      <div class="topic-chip" data-topic-filter="systems">Systems</div>
-      <div class="topic-chip" data-topic-filter="finance">Finance ops</div>
-      <div class="topic-chip" data-topic-filter="buying">Buying software</div>
-    </div>
+    <h1 class="fh-notes serif" style="margin-top:18px;max-width:760px">Notes from the messy middle of real operations.</h1>
+    <p style="margin-top:14px;font-size:17px;line-height:1.6;color:var(--muted);max-width:520px">Written by the people doing the work.</p>
   </div>
 </section>
 
 <div class="featured-note">
   <div>
-    <div class="kicker" style="color:var(--orange)">FEATURED · SYSTEMS</div>
-    <h2 class="serif">How much of your business is quietly being run from a spreadsheet?</h2>
-    <p>Have you ever opened a spreadsheet and realised the business would struggle if the person who built it disappeared tomorrow?</p>
+    <div class="eyebrow with-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <span style="color:var(--orange)">FEATURED NOTE</span>
+    </div>
+    <h2 class="serif fh-feat">How much of your business is quietly being run from a spreadsheet?</h2>
     <div class="featured-byline">
       <strong>Kathy</strong><span>·</span><span>4 min read</span><span>·</span><span>March 2026</span>
     </div>
-    <a href="field-notes/spreadsheet-dependency.html" class="link-cta" style="display:inline-block;margin-top:18px;font-size:16px">Read Kathy's note →</a>
+    <a href="field-notes/spreadsheet-dependency.html" class="link-cta" style="display:inline-block;margin-top:16px;font-size:16px">Read Kathy's note →</a>
   </div>
-  <div class="pull-card">
-    <p class="serif">"The spreadsheet isn't always the problem. It's what everyone has to do around it."</p>
-    <div class="context">The warning sign isn't that a spreadsheet exists. It's when people spend more time checking versions and chasing updates than doing the work.</div>
-  </div>
+  <p class="featured-quote serif">"The spreadsheet isn't always the problem. It's what everyone has to do around it."</p>
 </div>
 
 <section class="section">
   <div class="container">
     <div class="more-notes-head">MORE NOTES</div>
 
-    <a href="field-notes.html" class="note-row" data-topic="systems">
-      <span class="topic">SYSTEMS</span>
-      <div>
-        <h3 class="serif">Don't replace the messy spreadsheet yet. Read it first.</h3>
-        <p>Where its information comes from, who needs it next, and what manual work exists only because the surrounding systems don't connect.</p>
-      </div>
+    <a href="field-notes.html" class="note-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#98A2AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <h3 class="serif">Don't replace the messy spreadsheet yet. Read it first.</h3>
       <span class="meta">Kathy · 5 min <b>→</b></span>
     </a>
 
-    <a href="field-notes.html" class="note-row" data-topic="finance">
-      <span class="topic">FINANCE OPS</span>
-      <div>
-        <h3 class="serif">Nine days to close, and eight of them are waiting.</h3>
-        <p>What we look at when a month-end close keeps slipping — and why the fix is usually two handoffs, not new software.</p>
-      </div>
+    <a href="field-notes.html" class="note-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#98A2AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <h3 class="serif">Nine days to close, and eight of them are waiting.</h3>
       <span class="meta">Kathy · 4 min <b>→</b></span>
     </a>
 
-    <a href="field-notes.html" class="note-row" data-topic="buying">
-      <span class="topic">BUYING SOFTWARE</span>
-      <div>
-        <h3 class="serif">The demo always works. Ask what happens on day 40.</h3>
-        <p>Questions worth asking a vendor when you're the one who'll have to live inside the workflow afterwards.</p>
-      </div>
+    <a href="field-notes.html" class="note-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#98A2AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <h3 class="serif">The demo always works. Ask what happens on day 40.</h3>
       <span class="meta">VKT · 6 min <b>→</b></span>
     </a>
 
-    <a href="field-notes.html" class="note-row" data-topic="systems">
-      <span class="topic">SYSTEMS</span>
-      <div>
-        <h3 class="serif">Every workaround is a requirement nobody wrote down.</h3>
-        <p>The habits your team invented to keep the work moving are the most honest documentation the business has.</p>
-      </div>
+    <a href="field-notes.html" class="note-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#98A2AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <h3 class="serif">Every workaround is a requirement nobody wrote down.</h3>
       <span class="meta">VKT · 3 min <b>→</b></span>
     </a>
 
-    <a href="field-notes.html" class="note-row" data-topic="finance">
-      <span class="topic">FINANCE OPS</span>
-      <div>
-        <h3 class="serif">"Approved" is a conversation. Make it a record.</h3>
-        <p>Approvals by email work right up until someone needs to prove who decided what, and when.</p>
-      </div>
+    <a href="field-notes.html" class="note-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#98A2AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v13.5"></path><path d="M5 4.5V19a2 2 0 0 0 2 2h11"></path><path d="M9 8h5.5"></path><path d="M9 11.5h4"></path></svg>
+      <h3 class="serif italic">"Approved" is a conversation. Make it a record.</h3>
       <span class="meta">Kathy · 4 min <b>→</b></span>
     </a>
   </div>
@@ -111,16 +90,40 @@
 
 <div class="cta-band">
   <div>
-    <h2>Recognise any of this in your own week?</h2>
+    <h2 class="fh2-md" style="color:var(--navy);max-width:560px">Recognise any of this in your own week?</h2>
     <p>Show us the workaround. Four questions, no requirements document.</p>
   </div>
   <a href="talk-to-us.html" class="btn">We're humans. Talk to VKT →</a>
 </div>
 
-<footer>
-  <div class="footer-simple">
-    <span>© 2026 VKT Inc Solutions · Registered in the Philippines</span>
-    <span class="links"><a href="#">Security</a><a href="#">Privacy policy</a></span>
+<footer class="site-footer">
+  <div class="footer-links">
+    <div class="footer-brand">
+      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
+      <p>Operational systems for growing businesses.<br>Philippines-based.</p>
+    </div>
+    <div class="footer-col">
+      <strong>VKT</strong>
+      <a href="about.html">Why VKT</a>
+      <a href="anydb.html">Technology</a>
+      <a href="field-notes.html">Notes from the operators</a>
+      <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
+    </div>
+    <div class="footer-col">
+      <strong>Trust &amp; legal</strong>
+      <a href="#">Security</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Data handling</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <strong>Business information</strong>
+      <span>VKT Inc Solutions<br>Registered in the Philippines</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 VKT Inc Solutions</span>
+    <span>Questions about privacy or security? Ask us through the contact form.</span>
   </div>
 </footer>
 

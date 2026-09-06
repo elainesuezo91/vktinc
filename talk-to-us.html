@@ -14,15 +14,15 @@
 
 <header class="site-nav">
   <div class="container">
-    <a href="index.html"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
+    <a href="index.html" aria-label="VKT Inc. home"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
     <nav class="nav-links">
       <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#finance">Finance</a>
+      <a href="anydb.html">Technology</a>
       <a href="index.html#how-we-work">How we work</a>
       <a href="field-notes.html">Field Notes</a>
       <a href="talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><i></i><i></i></button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 
@@ -30,122 +30,205 @@
   <div class="container">
     <div>
       <div class="eyebrow on-navy">Talk to VKT</div>
-      <h1>Show us the <span>workaround.</span></h1>
+      <h1 class="fh-inner">Show us the <span>workaround.</span></h1>
     </div>
     <p>Four questions. No requirements document, no technology recommendation needed. Tell us what is harder than it should be and we'll work out what's worth changing.</p>
   </div>
 </section>
 
-<div class="form-grid">
-  <form class="form-col" onsubmit="return false">
-    <div class="kicker">THE FOUR QUESTIONS</div>
-    <div class="questions">
+<div data-talk-region>
 
-      <div class="question">
-        <span class="num">01</span>
-        <div>
-          <label for="q1">What's harder than it should be?</label>
-          <p>The process, not the software. Month-end, invoicing, approvals, stock, reporting — whatever it is.</p>
-          <textarea id="q1" class="field" placeholder="Closing the month takes us nine days and it all runs through one spreadsheet…"></textarea>
+  <!-- EDITING STATE -->
+  <div class="form-grid state-panel" data-state="editing">
+    <form class="form-col" data-talk-form novalidate>
+      <div class="kicker">THE FOUR QUESTIONS</div>
+      <div class="questions">
+
+        <div class="question">
+          <span class="num">01</span>
+          <div>
+            <label for="q-friction"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><circle cx="12" cy="12" r="3"></circle></svg>What's harder than it should be?</label>
+            <p>The process, not the software. Month-end, invoicing, approvals, stock, reporting — whatever it is.</p>
+            <textarea id="q-friction" name="friction" class="field" placeholder="Closing the month takes us nine days and it all runs through one spreadsheet…"></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="question">
-        <span class="num">02</span>
-        <div>
-          <label for="q2">How does the work happen today?</label>
-          <p>Who touches it, in what order, and where the manual steps are.</p>
-          <textarea id="q2" class="field" placeholder="Sales emails finance, finance re-enters it, someone checks it against the bank…"></textarea>
+        <div class="question">
+          <span class="num">02</span>
+          <div>
+            <label for="q-today"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="18" r="2.5"></circle><path d="M6 8.5V14a4 4 0 0 0 4 4h5.5"></path></svg>How does the work happen today?</label>
+            <p>Who touches it, in what order, and where the manual steps are.</p>
+            <textarea id="q-today" name="howItWorksToday" class="field" placeholder="Sales emails finance, finance re-enters it, someone checks it against the bank…"></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="question">
-        <span class="num">03</span>
-        <div>
-          <label>What are you running now?</label>
-          <p>Pick what applies. We'll assume everything else is spreadsheets and email.</p>
-          <div class="chip-row">
-            <span class="chip">Accounting</span>
-            <span class="chip">CRM</span>
-            <span class="chip">Payments</span>
-            <span class="chip">Inventory / operations</span>
-            <span class="chip">Payroll / HR</span>
-            <span class="chip">Mostly spreadsheets</span>
+        <div class="question">
+          <span class="num">03</span>
+          <div>
+            <label><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="5" rx="1.5"></rect><rect x="3" y="9.5" width="18" height="5" rx="1.5"></rect><rect x="3" y="16" width="18" height="5" rx="1.5"></rect></svg>What are you running now?</label>
+            <p>Pick what applies. We'll assume everything else is spreadsheets and email.</p>
+            <div class="chip-row">
+              <span class="chip">Accounting</span>
+              <span class="chip">CRM</span>
+              <span class="chip">Payments</span>
+              <span class="chip">Inventory / operations</span>
+              <span class="chip">Payroll / HR</span>
+              <span class="chip">Mostly spreadsheets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="num">04</span>
+          <div>
+            <label><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg>How do we reach you?</label>
+            <p>A person, not a lead form. One of us replies.</p>
+            <div class="field-2col">
+              <input class="field" name="name" placeholder="Your name">
+              <input class="field" name="contact" placeholder="Email or mobile">
+              <input class="field" name="business" placeholder="Business name">
+              <input class="field" name="headcount" placeholder="Roughly how many people">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="question">
-        <span class="num">04</span>
+      <div class="form-submit">
+        <button type="submit" class="btn">Send this to VKT →</button>
+        <span>One of us replies — usually the same day.</span>
+      </div>
+      <div class="form-error" style="padding-left:46px"></div>
+    </form>
+
+    <aside class="next-steps">
+      <div class="kicker" style="color:var(--navy-deep)">WHAT HAPPENS NEXT</div>
+      <div class="next-steps-list">
         <div>
-          <label>How do we reach you?</label>
-          <p>A person, not a lead form. One of us replies.</p>
+          <div class="step-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg><span>01 · TODAY</span></div>
+          <strong>A real reply from an operator</strong>
+          <p>Not a sales sequence. Usually a couple of questions about how the work moves.</p>
+        </div>
+        <div>
+          <div class="step-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 3V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg><span>02 · A 30-MINUTE CALL</span></div>
+          <strong>We walk the workflow with you</strong>
+          <p>Bring the spreadsheet or the email thread. That's the most useful document there is.</p>
+        </div>
+        <div>
+          <div class="step-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19V9"></path><path d="M12 19V5"></path><path d="M19 19v-6"></path><path d="M3 21h18"></path></svg><span>03 · IF IT'S WORTH IT</span></div>
+          <strong>The smallest useful next step</strong>
+          <p>What to change, what to keep, and a rough view of the effort. If nothing needs building, we'll say so.</p>
+        </div>
+      </div>
+      <div class="next-steps-note">
+        <p><strong>No pitch deck.</strong> We don't need you to know whether you need software. Most conversations start with someone describing a step everyone dreads.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- SENT STATE -->
+  <div class="state-panel" data-state="sent" hidden>
+    <div class="sent-grid">
+      <div>
+        <div class="sent-head">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 6.5 10 17l-5-5"></path></svg>
+          <span>SENT</span>
+        </div>
+        <h1 class="fh-sent" style="margin-top:20px;max-width:760px">Thanks — that's with <span style="color:var(--orange)">Kathy.</span></h1>
+        <p class="sent-lede">She reads these herself. Expect a reply today, usually with a couple of questions about how the work moves.</p>
+        <div class="hero-ctas">
+          <a href="field-notes.html" class="btn">Read Field Notes while you wait →</a>
+          <a href="talk-to-us.html" class="link-cta" data-send-another>Something wrong? Send another →</a>
+        </div>
+      </div>
+      <div class="receipt-card">
+        <div class="receipt-row receipt-head">
+          <span>WHAT YOU SENT</span>
+          <span style="font-size:12px;color:var(--muted)">Ref VKT-0472</span>
+        </div>
+        <div class="receipt-row">
+          <span class="label">What's harder than it should be</span>
+          <p data-echo="friction">—</p>
+        </div>
+        <div class="receipt-row">
+          <span class="label">What you're running</span>
+          <div class="receipt-chips">
+            <span>Accounting</span>
+            <span>Payments</span>
+            <span>Mostly spreadsheets</span>
+          </div>
+        </div>
+        <div class="receipt-row paper">
+          <span class="label">Replying to</span>
+          <p><span data-echo="name">—</span> · <span data-echo="business">—</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-ice">
+      <div class="container">
+        <div class="kicker" style="color:var(--navy-deep);margin-bottom:22px">WHAT HAPPENS NEXT</div>
+        <div class="next-cards">
+          <div><span>TODAY</span><strong>Kathy replies</strong><p>A real reply, not a sequence.</p></div>
+          <div class="highlight"><span>30 MINUTES</span><strong>We walk the workflow</strong><p>Bring the spreadsheet — that's the useful document.</p></div>
+          <div><span>IF IT'S WORTH IT</span><strong>The smallest useful step</strong><p>If nothing needs building, we'll say so.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAILED STATE -->
+  <div class="state-panel" data-state="failed" hidden>
+    <div class="fail-panel">
+      <div class="fail-header">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E67D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5"></path><circle cx="12" cy="16.5" r=".9" fill="#E67D4A"></circle></svg>
+        <div>
+          <strong>That didn't send.</strong>
+          <p>Your answers are still here — nothing was lost. Try again, and if it fails twice the connection is on our side, not yours.</p>
+          <div style="display:flex;gap:18px;align-items:center;margin-top:16px;flex-wrap:wrap">
+            <button class="btn" data-try-again>Try again →</button>
+          </div>
+        </div>
+      </div>
+      <div class="fail-body">
+        <span class="kicker">YOUR ANSWERS, STILL EDITABLE</span>
+        <div class="fail-fields">
+          <div class="field" data-echo="friction" style="min-height:auto">—</div>
           <div class="field-2col">
-            <input class="field" placeholder="Your name">
-            <input class="field" placeholder="Email or mobile">
-            <input class="field" placeholder="Business name">
-            <input class="field" placeholder="Roughly how many people">
+            <div class="field" data-echo="name">—</div>
+            <div class="field" data-echo="business">—</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="form-submit">
-      <button type="submit" class="btn">Send this to VKT →</button>
-      <span>Or email <a href="mailto:hello@vktincsolutions.com">hello@vktincsolutions.com</a></span>
-    </div>
-  </form>
-
-  <aside class="next-steps">
-    <div class="kicker" style="color:var(--navy-deep)">WHAT HAPPENS NEXT</div>
-    <div class="next-steps-list">
-      <div>
-        <span>01 · SAME WEEK</span>
-        <strong>A real reply from an operator</strong>
-        <p>Not a sales sequence. Usually a couple of questions about how the work moves.</p>
-      </div>
-      <div>
-        <span>02 · A 30-MINUTE CALL</span>
-        <strong>We walk the workflow with you</strong>
-        <p>Bring the spreadsheet or the email thread. That's the most useful document there is.</p>
-      </div>
-      <div>
-        <span>03 · IF IT'S WORTH IT</span>
-        <strong>The smallest useful next step</strong>
-        <p>What to change, what to keep, and a rough view of the effort. If nothing needs building, we'll say so.</p>
-      </div>
-    </div>
-    <div class="next-steps-note">
-      <p><strong>No pitch deck.</strong> We don't need you to know whether you need software. Most conversations start with someone describing a step everyone dreads.</p>
-    </div>
-  </aside>
 </div>
 
 <section class="section" style="border-top:1px solid var(--line)">
   <div class="container split uneven-left-wide">
     <div>
       <div class="eyebrow">Before you ask</div>
-      <h2 style="font-size:34px;line-height:1.07;letter-spacing:-.04em;margin-top:14px">Fair questions we get a lot.</h2>
+      <h2 class="fh2-md" style="margin-top:14px">Fair questions we get a lot.</h2>
     </div>
     <div class="faq">
       <div class="faq-item">
-        <button class="faq-q"><strong>Why not just buy another off-the-shelf tool?</strong><span class="icon">+</span></button>
+        <button class="faq-q" aria-expanded="false"><strong>Why not just buy another off-the-shelf tool?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>You might, and hundreds of capable tools already exist. The hard part is choosing, configuring and connecting technology around the process you actually run. Another tool on top of a workflow nobody has mapped usually adds work rather than removing it.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong>Do we have to replace our spreadsheets?</strong><span class="icon">+</span></button>
+        <button class="faq-q" aria-expanded="false"><strong>Do we have to replace our spreadsheets?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>No. Spreadsheets are often the right tool. The issue is when the business depends on one, or when people spend more time checking versions and chasing updates than doing the work.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong>What happens to the systems and data we already have?</strong><span class="icon">+</span></button>
+        <button class="faq-q" aria-expanded="false"><strong>What happens to the systems and data we already have?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>They usually stay. We start by working out what already does its job, then simplify, connect or automate around it. Replacing a working system needs a reason.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong>Does VKT only work on inventory?</strong><span class="icon">+</span></button>
+        <button class="faq-q" aria-expanded="false"><strong>Does VKT only work on inventory?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>No. Inventory and operational workflow is a common starting point because the pain is concrete, but the same approach applies to finance operations, approvals, quote-to-cash and reporting.</p>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><strong>Do you stay involved after it's built?</strong><span class="icon">+</span></button>
+        <button class="faq-q" aria-expanded="false"><strong>Do you stay involved after it's built?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>Yes. Implementation and support are part of the work, not a separate contract to chase. Adoption is where most operational projects quietly fail.</p>
       </div>
     </div>
@@ -154,16 +237,40 @@
 
 <div class="cta-band-navy">
   <div>
-    <h2>Not sure it's worth a conversation yet?</h2>
+    <h2 class="fh2-md">Not sure it's worth a conversation yet?</h2>
     <p>Read how we think about real operational problems first.</p>
   </div>
   <a href="field-notes.html" class="btn-outline-on-navy">Read Field Notes →</a>
 </div>
 
-<footer>
-  <div class="footer-simple">
-    <span>© 2026 VKT Inc Solutions · Registered in the Philippines</span>
-    <span class="links"><a href="#">Security</a><a href="#">Privacy policy</a><a href="#">Data handling</a></span>
+<footer class="site-footer">
+  <div class="footer-links">
+    <div class="footer-brand">
+      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
+      <p>Operational systems for growing businesses.<br>Philippines-based.</p>
+    </div>
+    <div class="footer-col">
+      <strong>VKT</strong>
+      <a href="about.html">Why VKT</a>
+      <a href="anydb.html">Technology</a>
+      <a href="field-notes.html">Notes from the operators</a>
+      <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
+    </div>
+    <div class="footer-col">
+      <strong>Trust &amp; legal</strong>
+      <a href="#">Security</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Data handling</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <strong>Business information</strong>
+      <span>VKT Inc Solutions<br>Registered in the Philippines</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 VKT Inc Solutions</span>
+    <span>Questions about privacy or security? Ask us through the contact form.</span>
   </div>
 </footer>
 

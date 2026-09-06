@@ -14,15 +14,15 @@
 
 <header class="site-nav">
   <div class="container">
-    <a href="index.html"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
+    <a href="index.html" aria-label="VKT Inc. home"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
     <nav class="nav-links">
-      <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#finance">Finance</a>
+      <a href="index.html#what-we-do" class="active">What we do</a>
+      <a href="anydb.html">Technology</a>
       <a href="index.html#how-we-work">How we work</a>
       <a href="field-notes.html">Field Notes</a>
       <a href="talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><i></i><i></i></button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 
@@ -30,17 +30,17 @@
   <div class="container">
     <div>
       <div class="eyebrow on-navy">Why VKT</div>
-      <h1>You'll deal with the <span>operators</span>, not a hand-off.</h1>
+      <h1 class="fh-about">You'll deal with the <span>operators</span>, not a hand-off.</h1>
     </div>
     <p>VKT was founded by people who have run operations inside businesses serving global markets. We understand the problem before prescribing technology, and we stay involved while it goes live.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section-white">
   <div class="container split uneven-left">
     <div>
       <div class="eyebrow">What we keep seeing</div>
-      <h2 style="font-size:36px;line-height:1.06;letter-spacing:-.04em;margin-top:14px">Growth doesn't break systems all at once.</h2>
+      <h2 class="fh2-md" style="margin-top:14px">Growth doesn't break systems all at once.</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:16px">
       <p style="font-size:17px;line-height:1.68;color:var(--muted)">A spreadsheet that worked for five people becomes risky at thirty. Information fragments across tools. Reporting gets harder. People invent workarounds, and eventually the systems stop reflecting how the business actually operates.</p>
@@ -50,117 +50,126 @@
   </div>
 </section>
 
-<section class="section-ice">
+<section class="section-navy">
   <div class="container">
-    <div class="section-header" style="margin-bottom:34px">
-      <div>
-        <div class="eyebrow on-ice">Why businesses come to VKT</div>
-        <h2 style="font-size:36px;color:var(--navy-deep)">Four reasons, in the order people say them.</h2>
-      </div>
-      <p style="color:var(--navy-deep)">Not a capability list. These are the things customers tell us made the difference.</p>
+    <div style="margin-bottom:30px">
+      <div class="eyebrow on-navy">No middle layer</div>
+      <h2 class="fh2-md" style="margin-top:14px;max-width:720px;color:#fff">Most firms subcontract the build. We are the build.</h2>
+      <p style="margin-top:14px;font-size:17px;line-height:1.6;color:var(--muted-on-navy);max-width:600px">There's no delivery team behind us that you never meet, and no account manager translating your workflow into a brief.</p>
     </div>
-    <div class="rule-cols" style="grid-template-columns:1fr 1fr;border-top:1px solid var(--ice-border)">
-      <div class="rule-col" style="border-right:1px solid var(--ice-border);border-bottom:1px solid var(--ice-border);padding-right:30px">
-        <span>01</span><strong>You talk to the people doing the work</strong><p style="color:var(--navy-deep)">No account manager layer. The person who maps your workflow is the person who builds and supports it.</p>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="flow-panel usual">
+        <span class="flow-label">THE USUAL SETUP</span>
+        <div class="flow-row usual">
+          <span class="flow-node outline">Your business</span>
+          <span class="flow-arrow dim">→</span>
+          <span class="flow-node dashed">Agency or reseller<span style="font-weight:400;color:var(--ice-text-dim)"> · margin, account manager, brief</span></span>
+          <span class="flow-arrow dim">→</span>
+          <span class="flow-node outline dim">Team you never meet</span>
+        </div>
       </div>
-      <div class="rule-col mid" style="border-bottom:1px solid var(--ice-border);padding-left:30px">
-        <span>02</span><strong>Global operating experience, local context</strong><p style="color:var(--navy-deep)">Practices shaped by businesses serving larger international markets, applied to how businesses here actually run.</p>
-      </div>
-      <div class="rule-col" style="border-right:1px solid var(--ice-border);padding-right:30px">
-        <span>03</span><strong>We start with the operating problem</strong><p style="color:var(--navy-deep)">Discovery first, technology second. Sometimes the answer is a smaller change than expected — or nothing to build at all.</p>
-      </div>
-      <div class="rule-col mid" style="padding-left:30px">
-        <span>04</span><strong>We're still there at adoption</strong><p style="color:var(--navy-deep)">Implementation and ongoing support are part of the work. That's usually where operational projects quietly fail.</p>
+      <div class="flow-panel vkt">
+        <span class="flow-label">WORKING WITH VKT</span>
+        <div class="flow-row vkt">
+          <span class="flow-node white">Your business</span>
+          <span class="flow-arrow orange">→</span>
+          <span class="flow-node navy-fill">The operators who map, build and support it</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-tight" id="operator-notes-intro">
+<section class="section-tight">
   <div class="container">
     <div class="section-header" style="margin-bottom:32px">
       <div>
         <div class="eyebrow">Who you'll be dealing with</div>
-        <h2 style="font-size:36px">Read how we think. That's a better introduction than a headshot.</h2>
+        <h2 class="fh2-md" style="margin-top:14px">Read how we think. That's a better introduction than a headshot.</h2>
       </div>
       <p>We'd rather you judged us on how we reason about real operational problems. Every note below was written by someone you'd actually work with.</p>
     </div>
     <div style="display:flex;flex-direction:column;border-top:1px solid var(--navy)">
-      <a href="field-notes/spreadsheet-dependency.html" class="note-row">
-        <span class="topic">SYSTEMS</span>
+      <a href="field-notes/spreadsheet-dependency.html" style="display:grid;grid-template-columns:170px 1fr 120px;gap:28px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background=''">
         <div>
-          <strong style="display:block;font-size:15px;color:var(--navy)">Kathy</strong>
-          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45;margin-bottom:10px">Spends most of her week inside other people's finance operations.</span>
+          <span class="kicker" style="color:var(--navy-deep)">SYSTEMS</span>
+          <strong style="display:block;margin-top:8px;font-size:15px;color:var(--navy)">Kathy</strong>
+          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45">Spends most of her week inside other people's finance operations.</span>
+        </div>
+        <div>
           <h3 class="serif" style="font-size:26px;line-height:1.15">How much of your business is quietly being run from a spreadsheet?</h3>
-          <p>The warning sign isn't that a spreadsheet exists. It's when people spend more time checking versions and chasing updates than doing the work.</p>
+          <p style="margin-top:8px;font-size:15px;line-height:1.6;color:var(--muted);max-width:600px">The warning sign isn't that a spreadsheet exists. It's when people spend more time checking versions and chasing updates than doing the work.</p>
         </div>
-        <span class="meta">4 min <b>→</b></span>
+        <span style="font-size:14px;color:var(--muted);text-align:right">4 min <b style="color:var(--orange)">→</b></span>
       </a>
-      <a href="field-notes.html" class="note-row">
-        <span class="topic">FINANCE OPS</span>
+      <a href="field-notes.html" style="display:grid;grid-template-columns:170px 1fr 120px;gap:28px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background=''">
         <div>
-          <strong style="display:block;font-size:15px;color:var(--navy)">Kathy</strong>
-          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45;margin-bottom:10px">Has closed a month-end under all of these conditions.</span>
+          <span class="kicker" style="color:var(--navy-deep)">FINANCE OPS</span>
+          <strong style="display:block;margin-top:8px;font-size:15px;color:var(--navy)">Kathy</strong>
+          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45">Has closed a month-end under all of these conditions.</span>
+        </div>
+        <div>
           <h3 class="serif" style="font-size:26px;line-height:1.15">Nine days to close, and eight of them are waiting.</h3>
-          <p>Why a slipping close is usually about two handoffs and an owner, not about the accounting platform.</p>
+          <p style="margin-top:8px;font-size:15px;line-height:1.6;color:var(--muted);max-width:600px">Why a slipping close is usually about two handoffs and an owner, not about the accounting platform.</p>
         </div>
-        <span class="meta">4 min <b>→</b></span>
+        <span style="font-size:14px;color:var(--muted);text-align:right">4 min <b style="color:var(--orange)">→</b></span>
       </a>
-      <a href="field-notes.html" class="note-row">
-        <span class="topic">BUYING SOFTWARE</span>
+      <a href="field-notes.html" style="display:grid;grid-template-columns:170px 1fr 120px;gap:28px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit" onmouseover="this.style.background='var(--paper)'" onmouseout="this.style.background=''">
         <div>
-          <strong style="display:block;font-size:15px;color:var(--navy)">VKT</strong>
-          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45;margin-bottom:10px">Written after sitting through a lot of demos.</span>
-          <h3 class="serif" style="font-size:26px;line-height:1.15">The demo always works. Ask what happens on day 40.</h3>
-          <p>Questions worth asking a vendor when you're the one who has to live inside the workflow afterwards.</p>
+          <span class="kicker" style="color:var(--navy-deep)">BUYING SOFTWARE</span>
+          <strong style="display:block;margin-top:8px;font-size:15px;color:var(--navy)">VKT</strong>
+          <span style="display:block;font-size:14px;color:var(--muted);line-height:1.45">Written after sitting through a lot of demos.</span>
         </div>
-        <span class="meta">6 min <b>→</b></span>
+        <div>
+          <h3 class="serif" style="font-size:26px;line-height:1.15">The demo always works. Ask what happens on day 40.</h3>
+          <p style="margin-top:8px;font-size:15px;line-height:1.6;color:var(--muted);max-width:600px">Questions worth asking a vendor when you're the one who has to live inside the workflow afterwards.</p>
+        </div>
+        <span style="font-size:14px;color:var(--muted);text-align:right">6 min <b style="color:var(--orange)">→</b></span>
       </a>
     </div>
     <a href="field-notes.html" class="link-cta" style="display:inline-block;margin-top:24px">All Field Notes →</a>
   </div>
 </section>
 
-<section class="section" id="technology">
-  <div class="container split uneven-left" style="border-top:1px solid var(--navy);padding-top:40px">
-    <div>
-      <div class="eyebrow">Technology</div>
-      <h2 style="font-size:34px;line-height:1.07;letter-spacing:-.04em;margin-top:14px">Where AnyDB fits — and where it doesn't.</h2>
-    </div>
-    <div>
-      <p style="font-size:17px;line-height:1.68;color:var(--muted)">AnyDB is the platform. VKT makes it work for your business. It's a flexible way to model a workflow that no off-the-shelf tool matches, without rebuilding everything around it.</p>
-      <div class="before-after" style="margin-top:22px">
-        <div class="ba-col">
-          <span class="ba-label">ANYDB PROVIDES</span>
-          <span style="font-size:15px;line-height:1.5;color:var(--navy)">The enabling platform: flexible data, workflow and reporting.</span>
-        </div>
-        <div class="ba-arrow" style="padding:0 6px"><span style="border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:18px solid var(--orange)"></span></div>
-        <div class="ba-col after">
-          <span class="ba-label after">VKT PROVIDES</span>
-          <span style="font-size:15px;line-height:1.5;color:var(--navy-deep)">Discovery, solution design, implementation, integration and ongoing support.</span>
-        </div>
-      </div>
-      <p style="margin-top:18px;font-size:15px;font-weight:600;color:var(--navy)">We're not a reseller, and AnyDB isn't the starting point for every customer. Where your existing systems can do the job, we'd rather make those work.</p>
-    </div>
-  </div>
-</section>
-
-<div class="cta-band-navy" id="notes-from-operators">
+<div class="cta-band">
   <div>
-    <div class="eyebrow on-navy">Notes from the operators</div>
-    <h2 style="max-width:640px">How we think, in our own words.</h2>
-    <p>Field Notes are observations from the messy middle of real operations — the reasoning behind the work.</p>
+    <div class="eyebrow on-ice">Talk to VKT</div>
+    <h2 class="fh2-md" style="color:var(--navy);max-width:600px">Got a process that should work better?</h2>
   </div>
-  <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-    <a href="field-notes.html" class="btn">Read Field Notes →</a>
-    <a href="talk-to-us.html" class="link-cta on-navy">We're humans. Talk to VKT →</a>
+  <div class="cta-band-actions">
+    <a href="talk-to-us.html" class="btn">Start the conversation →</a>
+    <span>Four questions · no requirements document</span>
   </div>
 </div>
 
-<footer>
-  <div class="footer-simple">
-    <span>© 2026 VKT Inc Solutions · Registered in the Philippines</span>
-    <span class="links"><a href="#">Security</a><a href="#">Privacy policy</a><a href="#">Terms</a></span>
+<footer class="site-footer">
+  <div class="footer-links">
+    <div class="footer-brand">
+      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
+      <p>Operational systems for growing businesses.<br>Philippines-based.</p>
+    </div>
+    <div class="footer-col">
+      <strong>VKT</strong>
+      <a href="about.html">Why VKT</a>
+      <a href="anydb.html">Technology</a>
+      <a href="field-notes.html">Notes from the operators</a>
+      <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
+    </div>
+    <div class="footer-col">
+      <strong>Trust &amp; legal</strong>
+      <a href="#">Security</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Data handling</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <strong>Business information</strong>
+      <span>VKT Inc Solutions<br>Registered in the Philippines</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 VKT Inc Solutions</span>
+    <span>Questions about privacy or security? Ask us through the contact form.</span>
   </div>
 </footer>
 

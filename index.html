@@ -12,23 +12,23 @@
 </head>
 <body>
 
-<header class="site-nav">
+<header class="site-nav on-navy">
   <div class="container">
-    <a href="index.html"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
+    <a href="index.html" aria-label="VKT Inc. home"><img src="assets/vkt-logo-nav.png" alt="VKT Inc." class="nav-logo"></a>
     <nav class="nav-links">
       <a href="index.html#what-we-do">What we do</a>
-      <a href="index.html#finance">Finance</a>
+      <a href="anydb.html">Technology</a>
       <a href="index.html#how-we-work">How we work</a>
       <a href="field-notes.html">Field Notes</a>
       <a href="talk-to-us.html" class="nav-cta">We're humans. Talk to VKT →</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><i></i><i></i></button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
   </div>
 </header>
 
 <section class="hero" id="what-we-do">
   <div class="container">
-    <h1>Most problems sit <span>between</span> your systems.</h1>
+    <h1 class="fh-home">Most problems sit <span>between</span> your systems.</h1>
     <div>
       <div class="eyebrow on-navy">Finance and business operations for growing businesses</div>
       <p>Not inside them. VKT simplifies finance and business operations, cuts manual work and gets more from the technology you already run.</p>
@@ -65,14 +65,14 @@
     <div class="section-header">
       <div>
         <div class="eyebrow">Where businesses feel it first</div>
-        <h2>You don't need to know where the gap is.</h2>
+        <h2 class="fh2">You don't need to know where the gap is.</h2>
       </div>
       <p>Start with what feels expensive, slow or repetitive as the business grows. Pick the one that sounds like your month.</p>
     </div>
-    <div class="tabs">
-      <div class="tab active" data-tab="0"><span>01</span>Month-end</div>
-      <div class="tab" data-tab="1"><span>02</span>Quote → cash</div>
-      <div class="tab" data-tab="2"><span>03</span>Approvals</div>
+    <div class="tabs" role="tablist">
+      <div class="tab active" data-tab="0" role="tab" aria-selected="true"><span>01</span>Month-end</div>
+      <div class="tab" data-tab="1" role="tab" aria-selected="false"><span>02</span>Quote → cash</div>
+      <div class="tab" data-tab="2" role="tab" aria-selected="false"><span>03</span>Approvals</div>
     </div>
   </div>
 
@@ -153,7 +153,7 @@
           <span class="ba-label">TODAY</span>
           <span class="ba-item">Requester</span>
           <span class="ba-item">Approver</span>
-          <span class="ba-item">Finance</span>
+          <span class="ba-item">Technology</span>
           <span class="ba-item problem">Email trail · follow-ups · unclear status · re-entry</span>
         </div>
         <div class="ba-arrow"><span></span></div>
@@ -173,12 +173,11 @@
   <div class="container split uneven-right">
     <div>
       <div class="eyebrow on-ice">How we choose technology</div>
-      <h2 style="font-size:36px;line-height:1.06;letter-spacing:-.04em;margin-top:14px;color:var(--navy-deep)">We don't add software for the sake of it.</h2>
+      <h2 class="fh2-md" style="margin-top:14px;color:var(--navy-deep)">We don't add software for the sake of it.</h2>
       <p style="margin-top:16px;font-size:16px;line-height:1.65;color:var(--navy-deep)">We work with what you already have first. When something is genuinely missing, we can build the workflow on a flexible platform such as AnyDB rather than rebuild everything.</p>
     </div>
     <div class="rule-list">
-      <div class="rule-list-head" style="border:none"></div>
-      <div><strong>Keep what works.</strong><p>Don't replace functioning systems without a reason.</p></div>
+      <div style="border-top:1px solid var(--ice-border)"><strong>Keep what works.</strong><p>Don't replace functioning systems without a reason.</p></div>
       <div><strong>Model what's missing.</strong><p>Build around the way the business actually operates.</p></div>
       <div><strong>Change as the business changes.</strong><p>Avoid another rigid implementation.</p></div>
       <p class="tail">AnyDB is one platform we can use where it fits — not the starting point for every customer.</p>
@@ -192,7 +191,7 @@
     <div class="section-header">
       <div>
         <div class="eyebrow">Start with one real problem</div>
-        <h2>Show us what is harder than it should be.</h2>
+        <h2 class="fh2">Show us what is harder than it should be.</h2>
       </div>
       <p>You don't need a requirements document or a technology recommendation. Start with how the work happens today.</p>
     </div>
@@ -207,7 +206,7 @@
 <section class="section-navy why-vkt">
   <div class="container">
     <div class="eyebrow on-navy">Why VKT</div>
-    <h2>Most firms subcontract the build.<br>We <span>are</span> the build.</h2>
+    <h2 class="fh-why">Most firms subcontract the build.<br>We <span>are</span> the build.</h2>
     <p>There's no delivery team behind us that you never meet, and no account manager translating your workflow into a brief. You get the operators, directly.</p>
     <div class="rule-cols on-navy" style="grid-template-columns:1fr 1fr 1fr">
       <div class="rule-col on-navy"><span>01</span><strong style="color:#fff">One conversation, start to finish</strong><p>The person who sat with your month-end is the person who changes it — and the person you call afterwards.</p></div>
@@ -224,7 +223,7 @@
 <div class="cta-band">
   <div>
     <div class="eyebrow on-ice">Talk to VKT</div>
-    <h2>Got a process that should work better?</h2>
+    <h2 class="fh2-md" style="color:var(--navy)">Got a process that should work better?</h2>
     <p>Show us the real workflow. We'll help work out what's worth changing, what should stay and the smallest useful next step.</p>
   </div>
   <div class="cta-band-actions">
@@ -233,15 +232,16 @@
   </div>
 </div>
 
-<footer>
+<footer class="site-footer">
   <div class="footer-links">
     <div class="footer-brand">
-      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto">
+      <img src="assets/vkt-logo-nav.png" alt="VKT Inc." style="height:34px;width:auto;flex:none;align-self:flex-start">
       <p>Operational systems for growing businesses.<br>Philippines-based.</p>
     </div>
     <div class="footer-col">
       <strong>VKT</strong>
       <a href="about.html">Why VKT</a>
+      <a href="anydb.html">Technology</a>
       <a href="field-notes.html">Notes from the operators</a>
       <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
     </div>
@@ -252,16 +252,14 @@
       <a href="#">Data handling</a>
       <a href="#">Terms</a>
     </div>
-    <div class="footer-col" style="color:var(--muted)">
-      <strong style="color:var(--navy)">Business information</strong>
-      <span>VKT Inc Solutions</span>
-      <span>Registered in the Philippines</span>
-      <span>SEC registration: <b style="color:var(--navy)">[add verified number]</b></span>
+    <div class="footer-col">
+      <strong>Business information</strong>
+      <span>VKT Inc Solutions<br>Registered in the Philippines</span>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 VKT Inc Solutions</span>
-    <span>Questions about privacy or security? <a href="mailto:security@vktincsolutions.com" style="color:var(--orange)">security@vktincsolutions.com</a></span>
+    <span>Questions about privacy or security? Ask us through the contact form.</span>
   </div>
 </footer>
 
