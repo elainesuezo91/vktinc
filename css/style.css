@@ -70,6 +70,8 @@ svg{ flex: none; }
 .fh-inner{ font-size: clamp(40px, calc(40px + 26 * ((100vw - 390px) / 790)), 66px); line-height: .93; letter-spacing: -.05em; }
 .fh-about{ font-size: clamp(38px, calc(38px + 30 * ((100vw - 390px) / 790)), 68px); line-height: .92; letter-spacing: -.05em; }
 .fh-anydb{ font-size: clamp(38px, calc(38px + 34 * ((100vw - 390px) / 790)), 72px); line-height: .92; letter-spacing: -.052em; }
+.fh-home2{ font-size: clamp(42px, calc(42px + 38 * ((100vw - 390px) / 790)), 80px); line-height: .92; letter-spacing: -.052em; }
+.fh-why2{ font-size: clamp(32px, calc(32px + 20 * ((100vw - 390px) / 790)), 52px); line-height: .98; letter-spacing: -.048em; }
 .fh-notes{ font-size: clamp(31px, calc(31px + 21 * ((100vw - 390px) / 790)), 52px); line-height: 1.04; letter-spacing: -.018em; }
 .fh-sent{ font-size: clamp(38px, calc(38px + 22 * ((100vw - 390px) / 790)), 60px); line-height: .95; letter-spacing: -.05em; }
 .fh2{ font-size: clamp(25px, calc(25px + 15 * ((100vw - 390px) / 790)), 40px); line-height: 1.05; letter-spacing: -.04em; }
@@ -238,6 +240,94 @@ svg{ flex: none; }
 .flow-arrow{ text-align: center; }
 .flow-arrow.dim{ color: #8FA3B5; }
 .flow-arrow.orange{ color: var(--orange); }
+
+/* ===== Homepage v2 ===== */
+.home-page{
+  --gutter: clamp(20px, calc(20px + 28 * ((100vw - 390px) / 790)), 48px);
+  --pad-lg: clamp(44px, calc(44px + 44 * ((100vw - 390px) / 790)), 88px);
+  --pad-md: clamp(44px, calc(44px + 44 * ((100vw - 390px) / 790)), 88px);
+}
+
+.hero-light{ background: #fff; padding: var(--pad-lg) var(--gutter) calc(var(--pad-lg) - 20px); }
+.hero-light h1{ font-weight: 700; color: var(--navy); max-width: 960px; }
+.hero-light h1 span{ color: var(--orange); }
+.hero-light p{ margin-top: 22px; font-size: clamp(16px, calc(16px + 3 * ((100vw - 390px) / 790)), 19px); line-height: 1.55; color: var(--muted); max-width: 560px; }
+
+/* Icon-illustrated gap band (single markup, reflows row -> stack) */
+.gap-cards-wrap{ background: var(--ice); border-top: 1px solid var(--ice-border); border-bottom: 1px solid var(--ice-border); padding: var(--pad-md) var(--gutter); }
+.gap-cards{ display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); align-items: stretch; background: #fff; border: 1px solid var(--ice-border); border-radius: 22px; overflow: hidden; }
+.gap-cards > .gap-cell{ padding: 30px 26px; }
+.gap-cards > .gap-cell strong{ display: block; margin-top: 10px; font-size: 19px; line-height: 1.28; letter-spacing: -.02em; }
+.gap-cards > .gap-cell p{ margin-top: 8px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.gap-cards .gap-cell.the-gap{ background: var(--orange-tint); border-left: 1px dashed var(--orange); border-right: 1px dashed var(--orange); }
+.gap-cards .gap-cell.vkt{ background: var(--navy-deep); color: #fff; }
+.gap-cards .gap-cell.vkt p{ color: var(--ice-text-dim); }
+.gap-cards .gap-arrow-cell{ display: flex; align-items: center; padding: 0 6px; }
+.gap-cards .gap-arrow-cell.vkt-side{ background: var(--navy-deep); }
+.gap-cards .gap-arrow-cell span{ width: 0; height: 0; border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 20px solid var(--orange); }
+
+/* Icon step-card grids: shared style for scenario + tech cards (desktop grid, mobile carousel) */
+.scenario-grid-v2{ display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; align-items: stretch; }
+.scenario-card{ display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.scenario-card .top{ padding: 26px 24px 22px; }
+.scenario-card .today{ padding: 0 24px 22px; }
+.scenario-card .today-label{ font: 700 10px var(--font-mono); letter-spacing: .14em; color: var(--muted); }
+.scenario-card .today-rows{ display: flex; flex-direction: column; gap: 9px; margin-top: 12px; }
+.scenario-card .today-rows span{ border: 1px solid var(--line); border-radius: 11px; padding: 11px 13px; font-size: 14px; font-weight: 600; }
+.scenario-card .today-rows span.problem{ border: 1px dashed var(--orange); background: var(--orange-tint); font-weight: 400; line-height: 1.45; color: var(--navy); }
+.scenario-card .down-arrow{ display: flex; justify-content: center; padding: 0 24px 14px; }
+.scenario-card .down-arrow span{ width: 0; height: 0; border-left: 11px solid transparent; border-right: 11px solid transparent; border-top: 15px solid var(--orange); }
+.scenario-card .after{ background: var(--ice); border-top: 1px solid var(--ice-border); padding: 22px 24px; margin-top: auto; }
+.scenario-card .after-label{ font: 700 10px var(--font-mono); letter-spacing: .14em; color: var(--navy-deep); }
+.scenario-card .after p{ margin-top: 12px; font-size: 15px; line-height: 1.5; font-weight: 600; color: var(--navy); }
+.scenario-card h3{ font-size: clamp(19px, calc(19px + 4 * ((100vw - 390px) / 790)), 23px); line-height: 1.22; letter-spacing: -.022em; margin-top: 14px; }
+
+.tech-cards-grid{ display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.tech-card{ background: #fff; border: 1px solid var(--ice-border); border-radius: 18px; padding: 26px 24px; }
+.tech-card strong{ display: block; margin-top: 16px; font-size: 20px; letter-spacing: -.02em; }
+.tech-card p{ margin-top: 8px; font-size: 15px; line-height: 1.6; color: var(--navy-deep); }
+
+/* "Start with one real problem" — icon-badge steps (single markup, reflows row -> stack) */
+.step-badges{ display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.step-badges .step-cell{ padding: 30px 26px; }
+.step-badges .step-cell.ice{ background: var(--ice); border-left: 1px solid var(--ice-border); border-right: 1px solid var(--ice-border); }
+.step-badges .badge-row{ display: flex; align-items: center; gap: 12px; }
+.step-badges .badge{ display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 12px; flex: none; }
+.step-badges .step-cell.ice .badge{ background: #fff; border-color: var(--ice-border); }
+.step-badges .idx{ font: 700 11px var(--font-mono); color: var(--orange); }
+.step-badges .step-cell.ice .idx{ color: var(--navy-deep); }
+.step-badges strong{ display: block; margin-top: 16px; font-size: 19px; line-height: 1.25; letter-spacing: -.02em; }
+.step-badges p{ margin-top: 8px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.step-badges .step-cell.ice p{ color: var(--navy-deep); }
+.step-badges .step-arrow{ display: flex; align-items: center; padding: 0 4px; }
+.step-badges .step-arrow.ice{ background: var(--ice); }
+.step-badges .step-arrow span{ width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 17px solid var(--orange); }
+
+/* Mobile list variant of the step badges (vertical ruled card) */
+.step-list-card{ border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.step-list-card > div{ padding: 22px 18px; display: flex; gap: 14px; align-items: flex-start; }
+.step-list-card > div.ice{ background: var(--ice); border-top: 1px solid var(--ice-border); border-bottom: 1px solid var(--ice-border); }
+.step-list-card .badge{ display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 12px; flex: none; }
+.step-list-card > div.ice .badge{ background: #fff; border-color: var(--ice-border); }
+.step-list-card strong{ font-size: 17px; line-height: 1.25; }
+.step-list-card p{ margin-top: 6px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.step-list-card > div.ice p{ color: var(--navy-deep); }
+.step-list-card{ display: none; }
+
+/* "Why VKT" v2 — icon one-liners */
+.why-vkt-v2-points{ display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-on-navy); }
+.why-vkt-v2-points > div{ padding: 24px 28px 0 0; border-right: 1px solid var(--line-on-navy-soft); display: flex; gap: 14px; align-items: flex-start; }
+.why-vkt-v2-points > div:last-child{ border-right: none; padding-left: 28px; padding-right: 0; }
+.why-vkt-v2-points > div:nth-child(2){ padding-left: 28px; }
+.why-vkt-v2-points strong{ font-size: 19px; line-height: 1.3; letter-spacing: -.02em; color: #fff; }
+.why-vkt-v2-list{ display: flex; flex-direction: column; margin-top: 22px; border-top: 1px solid var(--line-on-navy); }
+.why-vkt-v2-list > div{ padding: 16px 0; border-bottom: 1px solid var(--line-on-navy-soft); display: flex; gap: 12px; align-items: center; }
+.why-vkt-v2-list > div:last-child{ border-bottom: none; }
+.why-vkt-v2-list strong{ font-size: 16px; color: #fff; font-weight: 700; }
+
+/* ===== About: field-note teaser rows ===== */
+.about-note-row{ display: grid; grid-template-columns: 170px 1fr 120px; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
+.about-note-row:hover{ background: var(--paper); }
 
 /* ===== CTA bands ===== */
 .cta-band{ background: var(--ice); border-top: 1px solid var(--ice-border); border-bottom: 1px solid var(--ice-border); padding: var(--pad-sm) var(--gutter); display: flex; gap: 48px; align-items: end; justify-content: space-between; flex-wrap: wrap; }
@@ -448,8 +538,11 @@ textarea.field{ min-height: 78px; resize: vertical; }
 .related-note{ padding: 18px 0; border-bottom: 1px solid var(--line); }
 .related-note h3{ font-size: 23px; line-height: 1.2; margin-top: 8px; }
 
-/* ===== Responsive: nav collapses ~760px ===== */
-@media (max-width: 760px){
+/* ===== Responsive: nav collapses at the same 900px breakpoint as content grids.
+   (Previously 760px, separate from the 900px content breakpoint — the gap between
+   760-900px, which covers common tablet widths like iPad portrait at 768px, had no
+   room for 4 nav links + the wide CTA pill inline, causing a squeeze/wrap.) ===== */
+@media (max-width: 900px){
   .site-nav .container{ justify-content: space-between; }
   .nav-links{ display: none; }
   .nav-links.open{
@@ -506,8 +599,21 @@ textarea.field{ min-height: 78px; resize: vertical; }
   .compare-row > span:nth-child(2), .compare-row > span:nth-child(3){ border-left: none; }
   .compare-head{ display: none; }
 
-  .objects-grid, .build-weeks, .next-cards{ display: none; }
+  .objects-grid, .build-weeks, .next-cards, .scenario-grid-v2, .tech-cards-grid{ display: none; }
   .carousel{ display: flex; }
+
+  .gap-cards{ grid-template-columns: 1fr; border-radius: 18px; }
+  .gap-cards .gap-arrow-cell{ display: flex; justify-content: center; padding: 8px 0; }
+  .gap-cards .gap-arrow-cell span{ width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 14px solid var(--orange); border-bottom: none; }
+  .gap-cards .gap-cell.the-gap{ border-left: none; border-right: none; border-top: 1px dashed var(--orange); border-bottom: 1px dashed var(--orange); }
+
+  .step-badges{ display: none; }
+  .step-list-card{ display: block; }
+
+  .why-vkt-v2-points{ grid-template-columns: 1fr; border-top: 1px solid var(--line-on-navy); }
+  .why-vkt-v2-points > div{ border-right: none !important; padding: 16px 0 !important; border-bottom: 1px solid var(--line-on-navy-soft); align-items: center; }
+  .why-vkt-v2-points > div:last-child{ border-bottom: none; }
+  .why-vkt-v2-points svg{ margin-top: 0 !important; }
 
   .form-grid{ grid-template-columns: 1fr; }
   .form-col, .next-steps{ padding: var(--pad-sm) var(--gutter); border-left: none; }
@@ -516,6 +622,9 @@ textarea.field{ min-height: 78px; resize: vertical; }
   .sent-grid{ grid-template-columns: 1fr; gap: 24px; }
 
   .featured-note{ grid-template-columns: 1fr; gap: 16px; }
+
+  .about-note-row{ grid-template-columns: 1fr; gap: 6px; }
+  .about-note-row .meta, .about-note-row > span:last-child{ text-align: left; }
 
   .article-diagram-row{ grid-template-columns: 1fr; }
   .article-diagram-row .arrow{ display: none; }
