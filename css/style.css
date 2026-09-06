@@ -364,6 +364,8 @@ svg{ flex: none; }
 .footer-col a:hover{ color: var(--orange); }
 .footer-col a.cta{ color: var(--orange); }
 .footer-bottom{ max-width: var(--max); margin: 0 auto; padding: 20px var(--gutter) 34px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 24px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+.footer-bottom a{ color: var(--muted); text-decoration: underline; }
+.footer-bottom a:hover{ color: var(--orange); }
 
 /* ===== FAQ accordion ===== */
 .faq{ display: flex; flex-direction: column; border-top: 1px solid var(--navy); }
