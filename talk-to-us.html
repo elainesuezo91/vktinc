@@ -38,7 +38,9 @@
 
   <!-- EDITING STATE -->
   <div class="form-grid state-panel" data-state="editing">
-    <form class="form-col" data-talk-form novalidate>
+    <form class="form-col" data-talk-form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New Talk to VKT submission">
+      <input type="text" name="_gotcha" style="display:none">
       <div class="kicker">THE FOUR QUESTIONS</div>
       <div class="questions">
 
@@ -72,7 +74,10 @@
               <span class="chip">Inventory / Operations</span>
               <span class="chip">Payroll / HR</span>
               <span class="chip">Mostly Spreadsheets</span>
+              <span class="chip" data-chip-other>Others</span>
             </div>
+            <input class="field" name="runningNowOther" placeholder="What else are you running?" style="margin-top:12px" hidden data-chip-other-field>
+            <input type="hidden" name="runningNow" data-chip-hidden>
           </div>
         </div>
 
@@ -86,6 +91,7 @@
               <input class="field" name="contact" placeholder="Email or mobile">
               <input class="field" name="business" placeholder="Business name">
               <input class="field" name="headcount" placeholder="Roughly how many people">
+              <input class="field" name="country" placeholder="Country" style="grid-column:1 / -1">
             </div>
           </div>
         </div>
@@ -107,7 +113,7 @@
           <p>Not a sales sequence. Usually a couple of questions about how the work moves.</p>
         </div>
         <div>
-          <div class="step-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 3V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg><span>02 · A 30-MINUTE CALL</span></div>
+          <div class="step-head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 3V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path></svg><span>02 · A 45-MINUTE CALL</span></div>
           <strong>We walk the workflow with you</strong>
           <p>Bring the spreadsheet or the email thread. That's the most useful document there is.</p>
         </div>
@@ -167,7 +173,7 @@
         <div class="kicker" style="color:var(--navy-deep);margin-bottom:22px">WHAT HAPPENS NEXT</div>
         <div class="next-cards">
           <div><span>TODAY</span><strong>Kathy replies</strong><p>A real reply, not a sequence.</p></div>
-          <div class="highlight"><span>30 MINUTES</span><strong>We walk the workflow</strong><p>Bring the spreadsheet — that's the useful document.</p></div>
+          <div class="highlight"><span>45 MINUTES</span><strong>We walk the workflow</strong><p>Bring the spreadsheet — that's the useful document.</p></div>
           <div><span>IF IT'S WORTH IT</span><strong>The smallest useful step</strong><p>If nothing needs building, we'll say so.</p></div>
         </div>
       </div>
@@ -223,7 +229,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><strong>Does VKT only work on inventory?</strong><span class="icon">+</span></button>
-        <p class="faq-a" hidden>No. Inventory and operational workflow is a common starting point because the pain is concrete, but the same approach applies to finance operations, approvals, quote-to-cash and reporting.</p>
+        <p class="faq-a" hidden>No. Inventory and operational workflow is a common starting point because the pain is concrete, but the same approach applies to any other areas such as finance operations, insurance claims, approvals, quote-to-cash and reporting.</p>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><strong>Do you stay involved after it's built?</strong><span class="icon">+</span></button>

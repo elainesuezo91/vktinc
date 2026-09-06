@@ -48,11 +48,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Talk to Us — multi-select chips (visual only)
-  document.querySelectorAll('.chip-row .chip').forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chip.classList.toggle('selected');
+  // Talk to Us — multi-select chips
+  document.querySelectorAll('.chip-row').forEach(function (chipRow) {
+    var hiddenField = chipRow.parentElement.querySelector('[data-chip-hidden]');
+    var syncHidden = function () {
+      if (!hiddenField) return;
+      var labels = [];
+      chipRow.querySelectorAll('.chip.selected').forEach(function (c) {
+        if (c.hasAttribute('data-chip-other')) return;
+        labels.push(c.textContent.trim());
+      });
+      var otherField = chipRow.parentElement.querySelector('[data-chip-other-field]');
+      if (otherField && !otherField.hidden && otherField.value.trim()) labels.push(otherField.value.trim());
+      hiddenField.value = labels.join(', ');
+    };
+    chipRow.querySelectorAll('.chip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var selected = chip.classList.toggle('selected');
+        if (chip.hasAttribute('data-chip-other')) {
+          var otherField = chipRow.parentElement.querySelector('[data-chip-other-field]');
+          if (otherField) {
+            otherField.hidden = !selected;
+            if (!selected) otherField.value = '';
+          }
+        }
+        syncHidden();
+      });
     });
+    var otherInput = chipRow.parentElement.querySelector('[data-chip-other-field]');
+    if (otherInput) otherInput.addEventListener('input', syncHidden);
   });
 
   // Carousels (AnyDB mobile): sync dot indicators to scroll position
@@ -114,10 +138,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
       fillReceipt({ friction: friction, name: name || 'You', business: business || 'your business' });
 
-      // TODO: no backend wired up yet — replace this with a real submit
-      // (fetch to an API/Formspree/etc). On network failure, call showState('failed')
-      // instead so the entered values (still in the DOM) stay visible and editable.
-      showState('sent');
+      var submitBtn = talkForm.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(talkForm.action, {
+        method: 'POST',
+        body: new FormData(talkForm),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          showState('sent');
+        } else {
+          showState('failed');
+        }
+      }).catch(function () {
+        showState('failed');
+      }).finally(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
     });
 
     document.querySelectorAll('[data-try-again]').forEach(function (btn) {
