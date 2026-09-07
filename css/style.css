@@ -415,10 +415,6 @@ svg{ flex: none; }
 .obj-system-list span.dim{ background: var(--navy-mid); border: 1px solid rgba(191,231,241,.3); }
 .obj-system-list span.hot{ background: var(--orange); color: var(--navy); font-weight: 700; }
 
-/* ===== AnyDB: use-case chips ===== */
-.usecase-chips{ display: flex; flex-wrap: wrap; gap: 12px; }
-.usecase-chip{ display: flex; align-items: center; gap: 11px; border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; font-size: 16px; font-weight: 600; }
-
 /* ===== AnyDB: 4-week build grid ===== */
 .build-weeks{ display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 0; background: #fff; border: 1px solid var(--ice-border); border-radius: 20px; overflow: hidden; }
 .build-weeks > div{ padding: 26px 22px; border-right: 1px solid var(--line); }
