@@ -252,6 +252,9 @@ svg{ flex: none; }
 .hero-light h1{ font-weight: 700; color: var(--navy); max-width: 960px; }
 .hero-light h1 span{ color: var(--orange); }
 .hero-light p{ margin-top: 22px; font-size: clamp(16px, calc(16px + 3 * ((100vw - 390px) / 790)), 19px); line-height: 1.55; color: var(--muted); max-width: 560px; }
+.hero-powered-by{ display: flex; align-items: center; flex-wrap: wrap; gap: 14px 18px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); max-width: 680px; }
+.hero-powered-by-logo{ height: 22px; width: auto; flex: none; }
+.hero-powered-by p{ margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); flex: 1 1 220px; max-width: none; }
 
 /* Icon-illustrated gap band (single markup, reflows row -> stack) */
 .gap-cards-wrap{ background: var(--ice); border-top: 1px solid var(--ice-border); border-bottom: 1px solid var(--ice-border); padding: var(--pad-md) var(--gutter); }
