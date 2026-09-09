@@ -38,9 +38,10 @@
 
   <!-- EDITING STATE -->
   <div class="form-grid state-panel" data-state="editing">
-    <form class="form-col" data-talk-form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="New Talk to VKT submission">
-      <input type="text" name="_gotcha" style="display:none">
+    <form class="form-col" data-talk-form action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="ec2ac0b2-8084-48bc-8ba3-359edb222c0d">
+      <input type="hidden" name="subject" value="New Talk to VKT submission">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <div class="kicker">THE FOUR QUESTIONS</div>
       <div class="questions">
 
