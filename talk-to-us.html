@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Talk to VKT — Show us the workaround</title>
-<meta name="description" content="Four questions. No requirements document, no technology recommendation needed. Tell VKT what is harder than it should be.">
+<meta name="description" content="Four questions. No requirements document, no technology recommendation needed. Tell VKT what is harder than it should be, or the first job you'd give AI.">
 <link rel="icon" type="image/png" href="assets/vkt-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -30,7 +30,7 @@
       <div class="eyebrow on-navy">Talk to VKT</div>
       <h1 class="fh-inner">Show us the <span>workaround.</span></h1>
     </div>
-    <p>Four questions. No requirements document, no technology recommendation needed. Tell us what is harder than it should be and we'll work out what's worth changing.</p>
+    <p>Four questions. No requirements document, no technology recommendation needed. Tell us what is harder than it should be, or the first job you'd hand to AI, and we'll work out what's worth changing.</p>
   </div>
 </section>
 
@@ -48,8 +48,8 @@
         <div class="question">
           <span class="num">01</span>
           <div>
-            <label for="q-friction"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><circle cx="12" cy="12" r="3"></circle></svg>What's harder than it should be?</label>
-            <p>The process, not the software. Month-end, invoicing, approvals, stock, reporting — whatever it is.</p>
+            <label for="q-friction"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#203C56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><circle cx="12" cy="12" r="3"></circle></svg>What job would you give AI first?</label>
+            <p>Describe the process, not the software. Month-end, invoicing, approvals, stock, reporting — whatever everyone dreads.</p>
             <textarea id="q-friction" name="friction" class="field" placeholder="Closing the month takes us nine days and it all runs through one spreadsheet…"></textarea>
           </div>
         </div>
@@ -79,6 +79,17 @@
             </div>
             <input class="field" name="runningNowOther" placeholder="What else are you running?" style="margin-top:12px" hidden data-chip-other-field>
             <input type="hidden" name="runningNow" data-chip-hidden>
+            <div class="ai-in-use">
+              <p>Which AI do you already use, if any?</p>
+              <div class="chip-row">
+                <span class="chip">ChatGPT</span>
+                <span class="chip">Claude</span>
+                <span class="chip">Microsoft Copilot</span>
+                <span class="chip">Gemini</span>
+                <span class="chip">None yet</span>
+              </div>
+              <input type="hidden" name="aiInUse" data-chip-hidden>
+            </div>
           </div>
         </div>
 
@@ -151,7 +162,7 @@
           <span style="font-size:12px;color:var(--muted)">Ref VKT-0472</span>
         </div>
         <div class="receipt-row">
-          <span class="label">What's harder than it should be</span>
+          <span class="label">The job you'd give AI first</span>
           <p data-echo="friction">—</p>
         </div>
         <div class="receipt-row">
@@ -217,6 +228,10 @@
     </div>
     <div class="faq">
       <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><strong>Do we need to be "ready for AI" first?</strong><span class="icon">+</span></button>
+        <p class="faq-a" hidden>No. Nobody starts ready. We start with one process, structure it so people and AI can work on it, and give AI one job with a person approving. If AI isn't the right answer for that job, we'll say so.</p>
+      </div>
+      <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><strong>Why not just buy another off-the-shelf tool?</strong><span class="icon">+</span></button>
         <p class="faq-a" hidden>You might, and hundreds of capable tools already exist. The hard part is choosing, configuring and connecting technology around the process you actually run. Another tool on top of a workflow nobody has mapped usually adds work rather than removing it.</p>
       </div>
@@ -259,6 +274,7 @@
       <a href="about.html">Why VKT</a>
       <a href="anydb.html">Technology</a>
       <a href="field-notes.html">Notes from the operators</a>
+      <a href="first-job.html">Give AI its first job</a>
       <a href="talk-to-us.html" class="cta">We're humans. Talk to VKT →</a>
     </div>
     <div class="footer-col">
