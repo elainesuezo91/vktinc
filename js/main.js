@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Minimum: a contact method and one of the two open questions (per design spec)
       if (!contact || !friction) {
-        if (errorEl) errorEl.textContent = 'Tell us what’s harder than it should be, and how to reach you.';
+        if (errorEl) errorEl.textContent = 'Tell us the job you’d give AI first, and how to reach you.';
         return;
       }
       if (errorEl) errorEl.textContent = '';

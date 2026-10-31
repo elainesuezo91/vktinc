@@ -659,3 +659,31 @@ textarea.field{ min-height: 78px; resize: vertical; }
 @media (min-width: 901px){
   .carousel, .carousel-dots{ display: none; }
 }
+
+/* ===== Campaign: Give AI its first job (v18) ===== */
+.scenario-card .ai-job{ margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--ice-border); font-size: 14px; line-height: 1.5; color: var(--navy-deep); }
+.scenario-card .ai-job span{ display: block; margin-bottom: 4px; font: 700 10px var(--font-mono); letter-spacing: .14em; color: var(--orange); }
+.agentic h2 span{ color: var(--orange); }
+.agentic-lede{ margin-top: 18px; font-size: 17px; line-height: 1.6; color: var(--muted-on-navy); max-width: 640px; }
+.agentic-cols{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.agentic-cols .rule-col strong{ color: #fff; }
+.tech-cards-grid.four{ grid-template-columns: repeat(4,minmax(0,1fr)); }
+.hero-white h1 span{ color: var(--orange); }
+.tech-card .agent-job{ margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--ice-border); font-size: 14px; line-height: 1.5; color: var(--navy-deep); }
+.tech-card .agent-job b{ color: var(--orange); font-weight: 700; }
+.byo-list{ border-top: 1px solid var(--navy); }
+.byo-list > div{ border-bottom: 1px solid var(--line); }
+.byo-list p{ color: var(--muted); }
+.byo-list .tail{ color: var(--navy); }
+.safe-cols{ grid-template-columns: repeat(4,minmax(0,1fr)); }
+.safe-cols .rule-col strong{ color: #fff; }
+.ai-in-use{ margin-top: 20px; }
+.ai-in-use > p{ margin: 0 0 12px; font-size: 15px; font-weight: 600; color: var(--navy); }
+.article-body p.ai-cta{ margin-top: 4px; }
+.job-cols{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.job-cols .rule-col p b{ color: var(--navy); }
+.human-list{ border-top: 1px solid var(--navy); }
+.human-list > div{ border-bottom: 1px solid var(--line); }
+.human-list p{ color: var(--muted); }
+.human-list .tail{ color: var(--navy); }
+.hero-simple .hero-ctas .link-cta.on-navy{ color: var(--ice-text); }
